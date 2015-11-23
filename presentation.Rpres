@@ -1,0 +1,41 @@
+Fitting Generalized Linear Models
+========================================================
+author: Alexander Makeev
+date: 11/22/2015
+Coursera Developing Data Products Course Project
+
+
+Main Features
+========================================================
+<a href=https://santyagoseaman.shinyapps.io/DevelopingDataProductsCourseProject>Great application</a> which make incredible fitting of GLM model
+
+- Easy to interact
+- Ability to select predictors list
+- Ability to change predictors interaction
+
+Just look at this beautiful data
+========================================================
+
+```{r}
+summary(iris)
+```
+
+We make very complex calculations...
+========================================================
+
+```{r}
+model <- glm(Species ~ ., iris, family="binomial")
+```
+```{r, echo=FALSE}
+model
+```
+
+To show you unbelievable charts
+========================================================
+
+```{r, echo=FALSE}
+library(PerformanceAnalytics)
+data <- iris
+data$Species <- as.integer(data$Species)
+chart.Correlation(data, histogram=TRUE)
+```
